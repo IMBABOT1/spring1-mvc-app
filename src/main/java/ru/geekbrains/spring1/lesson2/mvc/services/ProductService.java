@@ -25,4 +25,8 @@ public class ProductService {
     public Product getProductById(Long id){
         return productRepository.getProductById(id);
     }
+
+    public void addProduct(Product p){
+        productRepository.addProduct(p);
+    }
 }

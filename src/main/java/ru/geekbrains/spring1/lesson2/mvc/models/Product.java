@@ -3,16 +3,16 @@ package ru.geekbrains.spring1.lesson2.mvc.models;
 public class Product {
     private Long id;
     private String title;
-    private int cost;
+    private int price;
 
     public Product(){
 
     }
 
-    public Product(Long id, String title, int cost) {
+    public Product(Long id, String title, int price) {
         this.id = id;
         this.title = title;
-        this.cost = cost;
+        this.price = price;
     }
 
 
@@ -32,16 +32,16 @@ public class Product {
         this.title = title;
     }
 
-    public int getCost() {
-        return cost;
+    public int getPrice() {
+        return price;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
+    public void setCost(int price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return "ID: " + id + " " + "Title: " + title + " " + "Cost: " + cost;
+        return "ID: " + id + " " + "Title: " + title + " " + "Cost: " + price;
     }
 }
