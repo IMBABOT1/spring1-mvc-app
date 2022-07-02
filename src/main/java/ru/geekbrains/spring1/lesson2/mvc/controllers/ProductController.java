@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import ru.geekbrains.spring1.lesson2.mvc.models.Product;
@@ -28,8 +29,7 @@ public class ProductController {
     }
 
     @GetMapping("/add_product")
-    public String addProduct(@RequestParam Long id, @RequestParam String title, @RequestParam int price){
-        Product p = new Product(id, title, price);
+    public String addProduct(@ModelAttribute Product p){
         productService.addProduct(p);
         return "redirect:/all";
     }

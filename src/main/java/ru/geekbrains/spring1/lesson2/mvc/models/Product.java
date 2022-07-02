@@ -36,7 +36,7 @@ public class Product {
         return price;
     }
 
-    public void setCost(int price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
